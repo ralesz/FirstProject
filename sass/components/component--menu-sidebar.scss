@@ -1,0 +1,30 @@
+.component--menu-sidebar {
+
+svg {
+  fill: #818181;
+  padding: 0 14px 0 40px;
+  width: 18px; 
+  height: 18px; 
+}
+
+ul {
+    width: 190px;
+    height: 60px;
+    margin: 0;
+    padding: 0;
+    background-color: #191919;
+    list-style-type: none;
+    text-align: left;
+	}
+
+li {
+	width: 190px;
+    height: 60px;
+    padding: 18px 18px;
+    color: #818181;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+	}
+
+}

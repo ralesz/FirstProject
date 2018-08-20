@@ -1,0 +1,117 @@
+@import "variables";
+@import "mixins";
+@import "normalize";
+@import "layout";
+@import url("//images/icons/");
+
+
+// /* Components */
+// @import "components/form_field";
+
+// /* Sections */
+// @import "section/registration_form";
+
+// /* Pages / Views */
+// @import "pages/registration";
+
+@import "components/component--button-sidebar";
+@import "components/component--menu-sidebar";
+@import "components/component--menu-topbar";
+
+body {
+	font: 300 14px  / 1.2em Roboto, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-left: 0;
+  padding-right: 0;
+  background-color: rgb(245,245,242);
+}
+
+
+.container-fluid {
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  text-align: left;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@for $i from 1 through 12 {
+  .col-sm-#{$i} {
+    $width: 100% / 12 * $i;
+    flex: 0 0 $width;
+    max-width: $width;
+  }
+}
+
+
+@media(max-width: 767px) {
+  @include grid('sm');
+}
+
+@media(min-width: 768px) {
+  @include grid('md');
+}
+
+@media(min-width: 992px) {
+  @include grid('lg');
+}
+
+@media(min-width: 1200px) {
+  @include grid('xl');
+}
+
+
+.inner-flex-container {
+   display: flex;
+   flex-direction: column;
+   height: 100%;
+   width: calc(100% - 190px);
+   order: 1;
+}
+   
+
+.sidebar   { 
+	flex: 1; 
+	order: 0; 
+	max-width: 190px; 
+	width: 100%;
+	height: 1200px;
+	background-color: #191919;
+}
+
+.topbar { 
+	flex: 1; 
+	order: 0; 
+	width: 100%;
+	height: 60px;
+	background: pink;
+}
+
+.Generalstat { 
+	height: 400px; 
+	order: 0;
+	margin: 12px 12px 6px 12px; 
+	background: tomato; 
+}
+
+.links { 
+	height: 400px; 
+	order: 1;
+	margin: 6px 12px 12px 12px;  
+	background: deepskyblue; 
+}
+
+

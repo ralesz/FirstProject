@@ -1,0 +1,45 @@
+.component--button-sidebar {
+	box-sizing: border-box;
+
+svg {
+  fill: #818181;
+  padding: 0 20px 0 10px;
+  width: 14px; 
+  height: 14px; 
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+ul {
+    width: 190px;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    background-color: #191919;
+    list-style-type: none;
+    border-left: 5px solid #191919;
+	}
+
+    ul:hover {
+    opacity: 0.8;
+    background-color: #282828;
+    border-left: 5px solid #f58220;
+    color: white;
+    svg {
+		  fill: white;
+	}
+	a {color: white;}
+   	}
+
+li {
+    padding: 14px 0px;
+    color: #818181;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+	}
+
+}
