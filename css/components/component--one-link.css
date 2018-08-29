@@ -1,0 +1,29 @@
+.one-line { margin: 12px 12px 6px 12px; height: auto; width: 100%; background-color: white; justify-content: center; }
+
+.one-line2 { margin: 12px 12px 6px 12px; height: auto; width: 100%; background-color: white; justify-content: center; }
+
+.links-header { display: flex; flex-direction: row; flex-wrap: wrap; justify-content: flex-start; align-content: center; align-items: center; list-style-type: none; border-bottom: 1px solid #191919; margin: 20px 0 20px 0; padding: 0 0 15px 20px; }
+
+.links-button { display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; align-content: center; align-items: center; list-style-type: none; padding: 15px 0 15px 20px; }
+
+.links1 { display: flex; flex-direction: row; flex-wrap: wrap; list-style-type: none; border-bottom: 1px solid #191919; padding: 15px 0 15px 20px; }
+
+.links1 li { margin-top: 10px; }
+
+.links1:hover { background-color: #b1bfbf; }
+
+.links1:hover .trash1 { fill: orange; }
+
+.links1:hover .trash2 { fill: #191919; }
+
+.links2 { border-top: 1px solid #191919; }
+
+.graph { display: flex; flex-direction: row; justify-content: center; align-content: center; align-items: center; list-style-type: none; padding: auto; }
+
+img { width: 15px; height: 15px; margin: 0 10px; }
+
+svg { width: 15px; height: 15px; margin: 0 10px; fill: white; }
+
+a { text-align: left; justify-content: left; }
+
+li { text-align: left; justify-content: center; }

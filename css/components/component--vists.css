@@ -1,0 +1,13 @@
+.Vists { display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-between; align-content: stretch; align-items: center; padding: 0; }
+
+.vis1 { display: flex; flex-direction: row; justify-content: space-between; list-style-type: none; align-content: stretch; align-items: center; width: 50%; padding: 0 20px 0 0; }
+
+.vis2 { display: flex; flex-direction: row; justify-content: space-between; list-style-type: none; align-content: stretch; align-items: center; width: 50%; padding: 0 0 0 20px; }
+
+.link1 { border-bottom: 1px solid #191919; font: 700 16px  / 1.2em Roboto-Bold; }
+
+.link2 { border-bottom: 1px solid #191919; font: 300 16px  / 1.2em Roboto-light; }
+
+.link1:nth-child(1) { order: 0; flex: 4 1 auto; align-self: auto; }
+
+.link1:nth-child(2) { order: 0; flex: 0 1 auto; align-self: auto; }

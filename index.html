@@ -2,31 +2,50 @@
 
 <html></html>
 	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	   <title>First page</title>
-	   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.min.css">
 	   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	   <link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/tablesaw.stackonly.css">
 	   <link rel="stylesheet" type="text/css" href="css/style.css">
+	   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script> 
+
 	</head>
 
-	<body>
-		<script src="js/script.js"></script>
+<body>
 
 
-<div class="container">
-  <div class="container-fluid">
-     <div class="row">
+<div class='container'>
+
+  <div class="top-menu">
     
-		<section class="sidebar">
-
-			<div class="component--menu-sidebar">
-				<ul>
-				    <li><img src="images/logo_just.png" alt=""><svg height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/></svg></li>
-				</ul>
-			</div>
-
-
-			<div class="component--button-sidebar">
-				<ul>
+    <div class="top-menu-left">
+        <ul class="top-menu-icon">
+			<li class="menu-s"><img src="images/logo_just.png" alt=""></li>
+			<li class="menu-s"><img class="hamburger" id="sidebarCollapse" src="images/hamburger.png" alt="" onclick="myFunction()"></li>
+		</ul>
+     </div>
+      
+     <div class="top-menu-right" id="topmenu">
+        <div class="component--menu-topbar">
+					<ul>
+						<li class="flex-item2"><img src="images/icons/wallet.svg" alt=""></li>
+						<li class="flex-item1"><select><option value="item-1">$1,500.00</option><option value="item-2">Item 2</option></select></li>
+						<li class="flex-item"><img src="images/icons/notification.svg" alt=""></li>
+						<li class="flex-item"><img src="images/icons/profile.svg" alt=""><a>Leonardo Dicaprio</a></li>
+						<li class="flex-item"><img src="images/icons/quit.svg" alt=""></li>
+					</ul>
+				</div>
+     </div> 
+  
+  </div>
+  
+  <div class='content'>
+  	<nav id="sidebar">
+    <div class="sidebar" id="myDIV">
+        <div class="component--button-sidebar">
+				<ul >
 				    <li><a href="#"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 					 viewBox="0 0 17 16" style="enable-background:new 0 0 17 16;" xml:space="preserve">
 				<path d="M8.5,3.6l0.9,2.7L9.6,7h0.7h2.8l-2.3,1.6l-0.6,0.4l0.2,0.7l0.9,2.7l-2.3-1.6l-0.6-0.4l-0.6,0.4l-2.3,1.6l0.9-2.7l0.2-0.7
@@ -34,8 +53,8 @@
 					/>
 					</svg>General</a></li>
 				</ul>
-				<ul>
-				    <li><a href="#"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+				<ul id="detailsCollapse" onclick="detailsFunction()">
+				    <li id="details"><a href="#"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 				 viewBox="0 0 14 13" style="enable-background:new 0 0 14 13;" xml:space="preserve">
 			<path d="M0,13h14v-1H0V13z M0,10h14V6H0V10z M9,7h4v2H9V7z M1,7h7v2H1V7z M0,0v4h14V0H0z M5,3H1V1h4V3z M13,3H6V1h7V3z"/>
 			</svg>Details</a></li>
@@ -78,46 +97,286 @@
 				C13,6.5,10.5,4,7.5,4z M8,11H1v1h7V11z"/>
 			</svg>Postback</a></li>
 				</ul>
-			</div>	
 
-		</section>
-
-
-		 <section class="inner-flex-container">
-		    
-		    <div class="component--menu-topbar">
+				<ul class="man">
+					<li><a class="manager">YOUR MANAGER</a></li>
+				</ul>
 				<ul>
-					<li class="col-sm-4><a href="#"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 17 18" style="enable-background:new 0 0 17 18;" xml:space="preserve">
-<path d="M17,9h-2V7.5C15,6.1,13.9,5,12.5,5H4.9L12,2.2V4h1V0.8L2.1,5C0.9,5.2,0,6.3,0,7.5v8C0,16.9,1.1,18,2.5,18h10
-	c1.4,0,2.5-1.1,2.5-2.5V14h2V9z M14,15.5c0,0.8-0.7,1.5-1.5,1.5h-10C1.7,17,1,16.3,1,15.5v-8C1,6.7,1.7,6,2.5,6h10
-	C13.3,6,14,6.7,14,7.5V9H8.5C7.1,9,6,10.1,6,11.5S7.1,14,8.5,14H14V15.5z M16,13H8.5C7.7,13,7,12.3,7,11.5S7.7,10,8.5,10H16V13z"/>
-</svg>$1,500.00</a></li>
-					<li class="col-sm-1"><img src="images/icons/wallet.svg" alt=""></li>
-					<li class="col-sm-1"><img src="images/icons/notifications.svg" alt=""></li>
-					<li class="col-sm-4"><img src="images/icons/profile.svg" alt="">Leonardo Dicaprio</li>
-<!-- 					<li class="col-sm-1"><img src="images/icons/exit.svg" alt=""></li>
- -->				</ul>
-			</div>
+					<li><a href="#"><img src="images/2-layers.png" alt="">Mikhael E.</a></li>
+				</ul>
+		</div>
+     </div>
+     </nav>
+
 	
+     <div class="general" id="general">
+         <div class="inner-flex-container">	
 
-		    <div class="Generalstat">General statistic</div>		    
-		    <div class="links">Links</div>		
-		  </section>	
-       
-    </div>
-  </div>
- </div>
+			    <div class="one-line">
+			    		<ul class="links-header">
+							<a>GENERAL STATS</a>
+							<form name="myBasicForm"></form>
+						</ul>
+						
+						<ul class="links-button">
+							<li><button class="button-orange-small">AD</button></li>
+						</ul>
+						
+
+						<div class="Vists">
+							<ul class="vis1">
+								<li class="link1">Visit Signups</li>
+								<li class="link2">124</li>
+							</ul>
+							<ul class="vis2">
+								<li class="link1">Visit Signups</li>
+								<li class="link2">123</li>
+							</ul>
+						</div>
+						<div class="Vists">
+							<ul class="vis1">
+								<li class="link1">FTD</li>
+								<li class="link2">177</li>
+							</ul>
+							<ul class="vis2">
+								<li class="link1">Turn over</li>
+								<li class="link2">345</li>
+							</ul>
+						</div>
 
 
-<!-- <ul>
-		    		<li><img src="images/icons/profile.svg" alt="">Leonardo Dicaprio</li>
-				</ul>
-				<ul>
-		    		<li><img src="images/icons/profile.svg" alt="">Dicaprio</li>
-				</ul>
-			</div> -->
 
+
+						<ul class="graph-name">
+						EARNING  CHART
+						</ul>					
+						
+						<ul class="graph">
+						<canvas id="myChart" height="400" width="640"></canvas>
+						</ul>
+			    </div>
+			    
+			    
+			
+
+				<div class="one-line2">
+						<ul class="links-header">
+							<a>LINKS</a>
+						</ul>
+						
+						<ul class="links-button">
+							<button class="button-orange">+ add new</button>
+						</ul>
+
+						<ul class="links1 links2">
+							<li class="col-xl-5 col-lg-5 col-md-5 col-sm-12">Home page</li>
+							<li class="col-xl-5 col-lg-5 col-md-5 col-sm-12">http://www.homepage.com</li>
+							<li class="col-xl-1 col-lg-1 col-md-1 col-sm-12"><svg class="trash1" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+					 viewBox="0 0 18 10" style="enable-background:new 0 0 18 10;" xml:space="preserve">
+				<path d="M7,8H5C3.3,8,2,6.7,2,5s1.3-3,3-3h1V1H5C2.8,1,1,2.8,1,5s1.8,4,4,4h2c2.2,0,4-1.8,4-4h-1C10,6.7,8.7,8,7,8z M13,1h-2
+					C8.8,1,7,2.8,7,5h1c0-1.7,1.3-3,3-3h2c1.7,0,3,1.3,3,3s-1.3,3-3,3h-1v1h1c2.2,0,4-1.8,4-4S15.2,1,13,1z"/>
+				</svg></li>
+							<li class="col-xl-1 col-lg-1 col-md-1 col-sm-12"><svg class="trash2" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+					 viewBox="0 0 14 16" style="enable-background:new 0 0 14 16;" xml:space="preserve">
+				<path d="M11,15H3V6H2v10h10V6h-1V15z M0,4v1h14V4H0z M7,2c0.6,0,1,0.4,1,1h1c0-1.1-0.9-2-2-2S5,1.9,5,3h1C6,2.4,6.4,2,7,2z M8,6v8h1
+					V6H8z M5,6v8h1V6H5z"/>
+				</svg></li>
+						</ul>
+
+						<ul class="links1">
+							<li class="col-xl-5 col-lg-5 col-md-5 col-sm-12">Currently offer</li>
+							<li class="col-xl-5 col-lg-5 col-md-5 col-sm-12">http://www.currently.com</li>
+							<li class="col-xl-1 col-lg-1 col-md-1 col-sm-12"><svg class="trash1" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+					 viewBox="0 0 18 10" style="enable-background:new 0 0 18 10;" xml:space="preserve">
+				<path d="M7,8H5C3.3,8,2,6.7,2,5s1.3-3,3-3h1V1H5C2.8,1,1,2.8,1,5s1.8,4,4,4h2c2.2,0,4-1.8,4-4h-1C10,6.7,8.7,8,7,8z M13,1h-2
+					C8.8,1,7,2.8,7,5h1c0-1.7,1.3-3,3-3h2c1.7,0,3,1.3,3,3s-1.3,3-3,3h-1v1h1c2.2,0,4-1.8,4-4S15.2,1,13,1z"/>
+				</svg></li>
+							<li class="col-xl-1 col-lg-1 col-md-1 col-sm-12"><svg class="trash2" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+					 viewBox="0 0 14 16" style="enable-background:new 0 0 14 16;" xml:space="preserve">
+				<path d="M11,15H3V6H2v10h10V6h-1V15z M0,4v1h14V4H0z M7,2c0.6,0,1,0.4,1,1h1c0-1.1-0.9-2-2-2S5,1.9,5,3h1C6,2.4,6.4,2,7,2z M8,6v8h1
+					V6H8z M5,6v8h1V6H5z"/>
+				</svg></li>
+						</ul>
+
+						<ul class="links1">
+							<li class="col-xl-5 col-lg-5 col-md-5 col-sm-12">Your Site</li>
+							<li class="col-xl-5 col-lg-5 col-md-5 col-sm-12">http://www.yoursite.com</li>
+							<li class="col-xl-1 col-lg-1 col-md-1 col-sm-12"><svg class="trash1" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+					 viewBox="0 0 18 10" style="enable-background:new 0 0 18 10;" xml:space="preserve">
+				<path d="M7,8H5C3.3,8,2,6.7,2,5s1.3-3,3-3h1V1H5C2.8,1,1,2.8,1,5s1.8,4,4,4h2c2.2,0,4-1.8,4-4h-1C10,6.7,8.7,8,7,8z M13,1h-2
+					C8.8,1,7,2.8,7,5h1c0-1.7,1.3-3,3-3h2c1.7,0,3,1.3,3,3s-1.3,3-3,3h-1v1h1c2.2,0,4-1.8,4-4S15.2,1,13,1z"/>
+				</svg></li>
+							<li class="col-xl-1 col-lg-1 col-md-1 col-sm-12"><svg class="trash2" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+					 viewBox="0 0 14 16" style="enable-background:new 0 0 14 16;" xml:space="preserve">
+				<path d="M11,15H3V6H2v10h10V6h-1V15z M0,4v1h14V4H0z M7,2c0.6,0,1,0.4,1,1h1c0-1.1-0.9-2-2-2S5,1.9,5,3h1C6,2.4,6.4,2,7,2z M8,6v8h1
+					V6H8z M5,6v8h1V6H5z"/>
+				</svg></li>
+						</ul>
+
+						<ul class="links1">
+							<li class="col-xl-5 col-lg-5 col-md-5 col-sm-12">Google</li>
+							<li class="col-xl-5 col-lg-5 col-md-5 col-sm-12">http://www.google.com</li>
+							<li class="col-xl-1 col-lg-1 col-md-1 col-sm-12"><svg class="trash1" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+					 viewBox="0 0 18 10" style="enable-background:new 0 0 18 10;" xml:space="preserve">
+				<path d="M7,8H5C3.3,8,2,6.7,2,5s1.3-3,3-3h1V1H5C2.8,1,1,2.8,1,5s1.8,4,4,4h2c2.2,0,4-1.8,4-4h-1C10,6.7,8.7,8,7,8z M13,1h-2
+					C8.8,1,7,2.8,7,5h1c0-1.7,1.3-3,3-3h2c1.7,0,3,1.3,3,3s-1.3,3-3,3h-1v1h1c2.2,0,4-1.8,4-4S15.2,1,13,1z"/>
+				</svg></li>
+							<li class="col-xl-1 col-lg-1 col-md-1 col-sm-12"><svg class="trash2" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+					 viewBox="0 0 14 16" style="enable-background:new 0 0 14 16;" xml:space="preserve">
+				<path d="M11,15H3V6H2v10h10V6h-1V15z M0,4v1h14V4H0z M7,2c0.6,0,1,0.4,1,1h1c0-1.1-0.9-2-2-2S5,1.9,5,3h1C6,2.4,6.4,2,7,2z M8,6v8h1
+					V6H8z M5,6v8h1V6H5z"/>
+				</svg></li>
+						</ul>
+
+
+							
+						<ul class="links-button">
+							<button class="button-orange">+ add new</button>
+						</ul>
+				</div>
+ 
+				<nav class="container-table">
+				  <div class="row">
+				    <div class="col-xs-12">
+				      <table class="table table-bordered table-hover tablesaw tablesaw-stack" >
+				        
+				        <ul class="links-header">
+							<a>DETAIL STATISTIC</a>
+						</ul>
+
+				        <thead>
+				          <tr>
+				            <th>Tracker name</th>
+				            <th>Initiated date</th>
+				            <th>Visits</th>
+				            <th>Unique</th>
+				            <th>Signups</th>
+				            <th>FTD</th>
+				            <th>Depositors</th>
+				            <th>Deposit ($)</th>
+				            <th>Payout ($)</th>
+				            <th>Turnover</th>
+				            <th>Deal</th>
+				          </tr>
+				        </thead>
+				        <tbody>
+				          <tr>
+				            <td>aff/sam_test</td>
+				            <td>17/08/02 (12:58)</td>
+				            <td>232</td>
+				            <td>214</td>
+				            <td>12</td>
+				            <td>6</td>
+				            <td>3</td>
+				            <td>34,425.00</td>
+				            <td>234.00</td>
+				            <td>421,342.00</td>
+				            <td>cpl (200)</td>
+				          </tr>
+				          <tr>
+				            <td>aff/sam_test</td>
+				            <td>17/08/02 (12:58)</td>
+				            <td>232</td>
+				            <td>214</td>
+				            <td>12</td>
+				            <td>6</td>
+				            <td>3</td>
+				            <td>34,425.00</td>
+				            <td>234.00</td>
+				            <td>421,342.00</td>
+				            <td>cpl (200)</td>
+				          </tr>
+				          <tr>
+				            <td>aff/sam_test</td>
+				            <td>17/08/02 (12:58)</td>
+				            <td>232</td>
+				            <td>214</td>
+				            <td>12</td>
+				            <td>6</td>
+				            <td>3</td>
+				            <td>34,425.00</td>
+				            <td>234.00</td>
+				            <td>421,342.00</td>
+				            <td>cpl (200)</td>
+				          </tr>
+				          <tr>
+				            <td>aff/sam_test</td>
+				            <td>17/08/02 (12:58)</td>
+				            <td>232</td>
+				            <td>214</td>
+				            <td>12</td>
+				            <td>6</td>
+				            <td>3</td>
+				            <td>34,425.00</td>
+				            <td>234.00</td>
+				            <td>421,342.00</td>
+				            <td>cpl (200)</td>
+				          </tr>
+				          <tr>
+				            <td>aff/sam_test</td>
+				            <td>17/08/02 (12:58)</td>
+				            <td>232</td>
+				            <td>214</td>
+				            <td>12</td>
+				            <td>6</td>
+				            <td>3</td>
+				            <td>34,425.00</td>
+				            <td>234.00</td>
+				            <td>421,342.00</td>
+				            <td>cpl (200)</td>
+				          </tr>
+				          <tr>
+				            <td>aff/sam_test</td>
+				            <td>17/08/02 (12:58)</td>
+				            <td>232</td>
+				            <td>214</td>
+				            <td>12</td>
+				            <td>6</td>
+				            <td>3</td>
+				            <td>34,425.00</td>
+				            <td>234.00</td>
+				            <td>421,342.00</td>
+				            <td>cpl (200)</td>
+				          </tr>
+				        </tbody>
+				        <tfoot>
+				          <tr>
+				            <td colspan="11">Data retrieved from</td>
+				          </tr>
+				        </tfoot>
+				      </table>
+				    </div>
+				  </div>
+				</nav>
+
+
+
+		</div>
+     </div> 
+  
+  </div>   
+
+
+			<div class="container-bottom-menu" id="bottommenu">
+				<div class="bottom-menu">
+					<ul class="row">
+						<li class="flex-item col-sm-12"><img src="images/icons/quit.svg" alt=""></li>
+						<li class="flex-item col-sm-12"><img src="images/icons/profile.svg" alt=""><a>Leonardo Dicaprio</a></li>
+						<li class="flex-item col-sm-12"><img src="images/icons/notification.svg" alt=""></li>
+						<li class="flex-item col-sm-12"><select name="" id=""><option value="item-1">$1,500.00</option><option value="item-2">Item 2</option></select></li>
+					</ul>
+				</div> 
+     		</div> 
+
+
+
+</div>
+
+
+
+		
+<script src="js/script.js" type="text/javascript"></script>   
 	</body>
 
 </html>
+

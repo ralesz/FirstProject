@@ -1,7 +1,13 @@
-.component--menu-topbar { display: inline-flex; flex-shrink: 0; background-color: green; color: white; padding: 5px; height: 60px; }
+.component--menu-topbar { position: fixed; top: 0; right: 0; width: calc(100% - 190px); color: black; background-color: white; height: 72px; border-bottom: 12px solid #f5f5f2; }
 
-.component--menu-topbar ul { display: inline-flex; list-style: none; margin: 0; }
+.component--menu-topbar ul { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; list-style: none; padding: 0; margin: 0; }
 
-.component--menu-topbar li { margin-right: 20px; border-left: 5px solid #191919; }
+.component--menu-topbar .flex-item { border-left: 1px solid #191919; padding: 14px 20px 14px 20px; height: 60px; }
 
-.component--menu-topbar img, .component--menu-topbar svg { padding: 21px 18px 21px 40px; width: 18px; height: 18px; }
+.component--menu-topbar .flex-item1 { border-left: 0; padding: 14px 20px 14px 5px; height: 60px; }
+
+.component--menu-topbar .flex-item2 { border-left: 1px solid #191919; padding: 14px 0px 14px 20px; align-items: center; height: 60px; }
+
+.component--menu-topbar a { padding: 0 10px; }
+
+.component--menu-topbar img { width: 16px; height: 16px; }
