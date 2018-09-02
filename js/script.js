@@ -54,15 +54,6 @@ function myFunction() {
 }
 
 
-$(window).on('load resize', function () {
-  if ($(this).width() < 768) {
-    $('table tfoot').hide();
-  } else {
-    $('table tfoot').show();
-  }  
-});
-
-
 $(document).ready(function () {
     $('#sidebarCollapse').on('click', function () {
         $('#sidebar').toggleClass('active'); 
@@ -72,13 +63,75 @@ $(document).ready(function () {
 });
 
 
-// $(document).ready(function () {
-//     $('#detailsCollapse').on('click', function () {
-//         $('#table-stat').toggleClass('display-none', 'display-block'); 
-//     });
+$(window).on('load resize', function () {
+  if ($(this).width() < 768) {
+    $('table tfoot').hide();
+  } else {
+    $('table tfoot').show();
+  }  
+});
 
-// });
 
-// function detailsFunction () {
-//     $(#table-stat).toggleClass('display-none', 'display-block'); 
-// }
+//działało + onclick="toggle_div_fun('sectionhide')" w htmll
+
+// function toggle_div_fun(id) {
+//     var divelement = document.getElementById(id);
+
+//     if(divelement.style.display == 'none')
+//         divelement.style.display = 'block';
+//     else
+//         divelement.style.display = 'none';
+// };
+
+//funkcje menu slider
+var onel = document.getElementById('one-line');
+var onel2 = document.getElementById('one-line2');
+var divelement = document.getElementById('sectionhide');
+
+var det = document.querySelector('.button-details');
+
+    det.addEventListener("click", function () {
+        (divelement.style.display = 'block') && (onel.style.display = 'none') && (onel2.style.display = 'none');
+});
+
+
+var det = document.querySelector('.button-general');
+
+    det.addEventListener("click", function () {
+        (divelement.style.display = 'none') && (onel.style.display = 'block') && (onel2.style.display = 'block');
+});
+
+
+
+
+
+//funkcja schowania dolnego menu
+var bottm = document.getElementById('bot');
+var bottm1 = document.getElementById('bot1');
+var bottm2 = document.getElementById('bot2');
+
+var det = document.querySelector('.quit-button');
+
+    det.addEventListener("click", function () {
+        if(bottm.style.display == 'none')
+        (bottm.style.display = 'block') && (bottm1.style.display = 'block') && (bottm2.style.display = 'flex');
+    else
+        (bottm.style.display = 'none') && (bottm1.style.display = 'none') && (bottm2.style.display = 'none');
+});
+
+
+//walidacja formularza
+
+// document.querySelector('form').addEventListener('submit', function(event) {
+//   var isFormValidate = true;
+
+//   var emailAddressInput = event.target.querySelector('input[name="email_address"]')
+//   if(emailAddressInput.value.indexOf('@') < 0) {
+//     isFormValidate = false;
+//     emailAddressInput.parentElement.querySelector('.error').innerHTML = 'Błędny adres e-mail';
+//   }
+
+//   return !isFormValidate ? event.preventDefault() : true;
+// })
+
+

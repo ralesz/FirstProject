@@ -5,12 +5,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	   <title>First page</title>
 	   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.min.css">
+	   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"">
 	   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	   <link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/tablesaw.stackonly.css">
 	   <link rel="stylesheet" type="text/css" href="css/style.css">
 	   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script> 
-
 	</head>
 
 <body>
@@ -32,8 +32,8 @@
 					<ul>
 						<li class="flex-item2"><img src="images/icons/wallet.svg" alt=""></li>
 						<li class="flex-item1"><select><option value="item-1">$1,500.00</option><option value="item-2">Item 2</option></select></li>
-						<li class="flex-item"><img src="images/icons/notification.svg" alt=""></li>
-						<li class="flex-item"><img src="images/icons/profile.svg" alt=""><a>Leonardo Dicaprio</a></li>
+						<li class="flex-item"><img id="notification" src="images/icons/notification.svg" alt=""><img id="indicator" src="images/indicator.png" alt=""></li>
+						<li class="flex-item"><img src="images/icons/profile.svg" alt="">Leonardo Dicaprio</li>
 						<li class="flex-item"><img src="images/icons/quit.svg" alt=""></li>
 					</ul>
 				</div>
@@ -45,16 +45,17 @@
   	<nav id="sidebar">
     <div class="sidebar" id="myDIV">
         <div class="component--button-sidebar">
-				<ul >
-				    <li><a href="#"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+				<ul class="button-general">
+				    <li id="button-general"><a href="#"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 					 viewBox="0 0 17 16" style="enable-background:new 0 0 17 16;" xml:space="preserve">
 				<path d="M8.5,3.6l0.9,2.7L9.6,7h0.7h2.8l-2.3,1.6l-0.6,0.4l0.2,0.7l0.9,2.7l-2.3-1.6l-0.6-0.4l-0.6,0.4l-2.3,1.6l0.9-2.7l0.2-0.7
 					L6.1,8.6L3.9,7h2.8h0.7l0.2-0.7L8.5,3.6 M8.5,0.4L6.7,6H0.8l4.8,3.5L3.7,15l4.8-3.5l4.8,3.5l-1.8-5.6L16.2,6h-5.9L8.5,0.4L8.5,0.4z"
 					/>
 					</svg>General</a></li>
 				</ul>
-				<ul id="detailsCollapse" onclick="detailsFunction()">
-				    <li id="details"><a href="#"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+<!-- 				onclick="toggle_div_fun('sectionhide')"
+ -->				<ul class="button-details">
+				    <li id="button-details"><a href="#"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 				 viewBox="0 0 14 13" style="enable-background:new 0 0 14 13;" xml:space="preserve">
 			<path d="M0,13h14v-1H0V13z M0,10h14V6H0V10z M9,7h4v2H9V7z M1,7h7v2H1V7z M0,0v4h14V0H0z M5,3H1V1h4V3z M13,3H6V1h7V3z"/>
 			</svg>Details</a></li>
@@ -112,7 +113,7 @@
      <div class="general" id="general">
          <div class="inner-flex-container">	
 
-			    <div class="one-line">
+			    <div class="one-line" id="one-line">
 			    		<ul class="links-header">
 							<a>GENERAL STATS</a>
 							<form name="myBasicForm"></form>
@@ -159,7 +160,7 @@
 			    
 			
 
-				<div class="one-line2">
+				<div class="one-line2" id="one-line2">
 						<ul class="links-header">
 							<a>LINKS</a>
 						</ul>
@@ -235,17 +236,17 @@
 						</ul>
 				</div>
  
-				<nav class="container-table">
+				<div class="container-table scroll-wrapper" id="sectionhide">
 				  <div class="row">
-				    <div class="col-xs-12">
-				      <table class="table table-bordered table-hover tablesaw tablesaw-stack" >
-				        
-				        <ul class="links-header">
+				    <div class="col-sm-12">
+				      <table class="table table-hover table-bordered" >
+<!-- 				       							 table-responsive tablesaw-stack
+ -->				    <ul class="links-header1">
 							<a>DETAIL STATISTIC</a>
 						</ul>
 
 				        <thead>
-				          <tr>
+				          <tr class="info">
 				            <th>Tracker name</th>
 				            <th>Initiated date</th>
 				            <th>Visits</th>
@@ -347,9 +348,108 @@
 				      </table>
 				    </div>
 				  </div>
-				</nav>
+				</div>
+
+<!-- sekcja formularza
+ -->			<div class="container-form">
+					<ul class="links-header">
+						<a>FORMS</a>
+					</ul>
+<!-- 					<form action="" method="POST">
+ -->				<form class="form-horizontal">
+ 						<dir class="form-part1">
+						  <div class="form-group">
+						    <label for="exampleInputName2" class="col-lg-2 col-sm-12 control-label">Name</label>
+						    <div class="col-lg-4 col-sm-12">
+						      <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane">
+						    </div>
+						  </div>
+						  
+						  <div class="form-group">
+						    <label for="exampleInputName2" class="col-lg-2 col-sm-12 control-label">Surname</label>
+						    <div class="col-lg-4 col-sm-12">
+						      <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane">
+						    </div>
+						  </div>
+						  
+						  <div class="form-group">
+						    <label for="exampleInputEmail3" class="col-lg-2 col-sm-12 control-label">E-mail</label>
+						    <div class="col-lg-4 col-sm-12">
+						      <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
+						    </div>
+						  </div>
+						  
+						  <div class="form-bottom-line"></div>
+						
+						</dir>
+
+						<dir class="form-part1">
+						  <div class="form-group">
+						    <label for="exampleInputName2" class="col-sm-2 control-label">Skype</label>
+						    <div class="col-sm-4">
+						      <input type="text" class="form-control" id="exampleInputName2" placeholder="">
+						    </div>
+						  </div>
+						  
+						  <div class="form-group">
+						    <label for="exampleInputName2" class="col-sm-2 control-label">ICQ</label>
+						    <div class="col-sm-4">
+						      <input type="text" class="form-control" id="exampleInputName2" placeholder="">
+						    </div>
+						  </div>
+						  
+						  <div class="form-group">
+						    <label for="exampleInputEmail3" class="col-sm-2 control-label">Msn</label>
+						    <div class="col-sm-4">
+						      <input type="email" class="form-control" id="exampleInputEmail3" placeholder="">
+						    </div>
+						  </div>
+
+						  <div class="form-bottom-line"></div>
+						
+						</dir>
 
 
+						<dir class="form-part1">
+						  <div class="form-group">
+						    <label for="exampleInputName2" class="col-sm-2 control-label">Wallet</label>
+						    <div class="col-sm-4">
+						      <input type="text" class="form-control" id="exampleInputName2" placeholder="">
+						    </div>
+						  </div>
+
+						  <div class="form-bottom-line"></div>
+						
+						</dir>
+
+
+						<dir class="form-part1">
+						  <div class="form-group">
+						    <label for="exampleInputName2" class="col-sm-2 control-label">Password</label>
+						    <div class="col-sm-4">
+						      <input type="text" class="form-control" id="exampleInputName2" placeholder="">
+						    </div>
+						  </div>
+						  <div class="form-group">
+						    <label for="exampleInputName2" class="col-sm-2 control-label">Repeat</label>
+						    <div class="col-sm-4">
+						      <input type="text" class="form-control" id="exampleInputName2" placeholder="">
+						    </div>
+						  </div>
+
+						  <div class="form-bottom-line"></div>
+						
+						</dir>
+						  
+							<button class="button-orange">Save</button>
+
+						  <div class="form-bottom-line"></div>
+						</dir>
+					</form>
+				</div>
+
+
+<!-- koniec sekcji formularza-->
 
 		</div>
      </div> 
@@ -360,10 +460,10 @@
 			<div class="container-bottom-menu" id="bottommenu">
 				<div class="bottom-menu">
 					<ul class="row">
-						<li class="flex-item col-sm-12"><img src="images/icons/quit.svg" alt=""></li>
-						<li class="flex-item col-sm-12"><img src="images/icons/profile.svg" alt=""><a>Leonardo Dicaprio</a></li>
-						<li class="flex-item col-sm-12"><img src="images/icons/notification.svg" alt=""></li>
-						<li class="flex-item col-sm-12"><select name="" id=""><option value="item-1">$1,500.00</option><option value="item-2">Item 2</option></select></li>
+						<li class="flex-item col-sm-12 quit-button"><img src="images/icons/quit.svg" id="quit-button" alt=""></li>
+						<li class="flex-item col-sm-12 bot" id="bot"><img src="images/icons/profile.svg" alt=""><a>Leonardo Dicaprio</a></li>
+						<li class="flex-item col-sm-12 bot1" id="bot1"><img src="images/icons/notification.svg" alt=""></li>
+						<li class="flex-item col-sm-12 bot2" id="bot2"><select name="" id=""><option value="item-1">$1,500.00</option><option value="item-2">Item 2</option></select></li>
 					</ul>
 				</div> 
      		</div> 

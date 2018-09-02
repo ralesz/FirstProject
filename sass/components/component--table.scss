@@ -2,13 +2,17 @@
   background-color: white;
   padding: 12px;
   margin: 12px;
+  display: none;
 }
 
-
-h2 {
-  text-align: center;
-  padding-top: 20px 0;
+td {
+  height: 70px;
 }
+
+// h2 {
+//   text-align: center;
+//   padding-top: 20px 0;
+// }
 
 .table-bordered {
   border: 1px solid #ddd !important;
@@ -22,16 +26,28 @@ table tbody tr td {
   text-align: center !important;
 }
 
+table ul {
+  padding: 0;
+  a {margin: 20px;}
+}
+
+
 // @media (max-width: 768px) {
 //   .tablesaw-stack tbody tr:not(:last-child) {
 //     border-bottom: 2px solid #0B0B0D;
 //     border: 1px solid #ddd !important;
 //     margin: 0 10px;
-//   // }
+//   }
 // }
 
 .p {
   text-align: center;
-  padding-top: 140px;
+  padding-top: 200px;
   font-size: 14px;
+}
+
+.links-header1 {
+  border-bottom: 1px solid #191919;
+  padding: 0 0 15px 0;
+  margin: 5px 0 20px 5px;
 }

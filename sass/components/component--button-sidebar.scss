@@ -46,6 +46,7 @@ li {
     color: #818181;
     display: inline-block;
     text-decoration: none;
+     text-align: center;
   }
 
   .manager {
@@ -54,12 +55,90 @@ li {
     margin-left: 20px;
     background-color: #191919;
     ul:hover {
-      opacity: 0;
+    opacity: 0;
     }
   }
+
   .man {
     border-top: 1px solid #818181;
     background-color: #191919;
   }
+
+}
+
+
+@media(max-width: 767px) {
+
+.component--button-sidebar {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    // justify-content: center;
+    // align-content: center;
+    // align-items: center;
+    // list-style-type: none;
+    width: 100%;  
+  // position: fixed;
+  // top: 60px; left: 0;
+
+.sidebar {
+  // flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: #191919;
+  width: 100%;
+  // min-height: 100vh;
+  height: 100%;     
+}
+
+
+  ul {
+      width: 100%;
+      height: auto;
+      margin: 0;
+      padding: 0;
+      background-color: #191919;
+      list-style-type: none;
+      border-left: 5px solid #191919;
+      cursor: pointer;
+      align-items: center;
+  }
+
+    ul:hover {
+    background-color: #282828;
+    border-left: 5px solid #f58220;
+    color: white;
+    svg {
+      fill: white;
+     }
+     a {color: white;}
+      }
+
+li {
+    padding: 14px 0px;
+    color: #818181;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+  }
+
+  .manager {
+    margin-top: 20px;
+    color: #818181;
+    margin-left: 20px;
+    background-color: #191919;
+    ul:hover {
+    opacity: 0;
+    }
+  }
+
+  .man {
+    border-top: 1px solid #818181;
+    background-color: #191919;
+  }
+
+}
+
 
 }

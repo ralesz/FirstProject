@@ -29,15 +29,15 @@ select {
   background-size: 15px auto;
   background-repeat: no-repeat;
   background-position: right 5px center;
-}
+  }
 
 
-.container {
+  .container {
   width: 100%;
   margin: 0 auto;
   padding-left: 0;
   padding-right: 0;
-  background-color: rgb(245,245,242);
+  background-color: #f5f5f2;
 
 
     display: flex;
@@ -53,6 +53,7 @@ select {
   flex-direction: row;
   width: 100%;
   height: 60px;
+  border-bottom: 20px grey;
   
 }
 
@@ -82,6 +83,7 @@ select {
   flex-wrap: wrap;
   width: calc(100% - 190px);
   // width: 100%;
+  padding-right: 12px;
 }
 
 
@@ -90,6 +92,7 @@ select {
   flex-direction: row;
   flex-wrap: wrap;
   width: calc(100% - 190px);
+
 }
 
 
@@ -104,7 +107,7 @@ select {
 
 @media(max-width: 767px) {
   @include grid('sm');
-  .links1 {margin: 0 15px;
+  .links1 {margin: 0 ;
     li {text-align: center;}}
     .links-button {margin: 0 15px;}
     .Vists {margin: 0 15px;}
@@ -124,9 +127,6 @@ select {
       display: none;
     }
 
-    #table-stat {
-    visibility: collapse;
-    }
     
     select {
     background-color: rgb(245,245,242);
@@ -146,10 +146,11 @@ select {
   }
 
   .inner-flex-container {
-   margin-bottom: 180px;
+   margin-bottom: 50px;
+   // padding-right: 12px;
   }
 
-  // #table-stat {
+  // #sectionhide {
   //     .display-none {
   //     display: none;
   //     }
@@ -157,17 +158,35 @@ select {
   //     display: block;  
   //     }
   // }
+  // #table-stat {
+  //     display: none;  
+  // }
+
+.display-none {
+      display: none;
+      }
 
 
+.scroll-wrapper {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+}
 
+.scroll-wrapper table {
+  width: 100%;
+  max-width: 100%;
+}
 
-
+#bot, #bot1, #bot2 {
+  display: none;
+}
     
 }
 
 @media(min-width: 768px) {
   @include grid('md');
-  .links1 {margin: 0 15px;}
+  .links1 {margin: 0;}
   .links-button {margin: 0 15px;}
   .Vists {margin: 0 15px;}
   .graph {margin: 0 15px;}
@@ -203,11 +222,6 @@ select {
   .inner-flex-container {
    margin-bottom: 0;
  }
-
-.tablesaw-stack tbody tr:not(:last-child) {
-    border-bottom: 2px solid #0B0B0D;
-    margin: 0 10px;
-  }
 
 }
 
@@ -271,16 +285,17 @@ select {
 
 
 .inner-flex-container {
-  height: 100%;
+    height: 100%;
    display: flex;
    flex-direction: column;
    // height: 100%;
    width: 100%;
    order: 1;
-   overflow-y: scroll;
+   // overflow-y: scroll;
    overflow-x: hidden;
    // margin-bottom: 250px;
 }
+
 
 
 
