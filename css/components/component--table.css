@@ -1,4 +1,4 @@
-.container-table { background-color: white; padding: 12px; margin: 12px; display: none; }
+.container-table { background-color: white; padding: 12px; margin: 12px; height: 90vh; display: none; overflow-x: auto; }
 
 td { height: 70px; }
 

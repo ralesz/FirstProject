@@ -1,4 +1,4 @@
-.container-bottom-menu { width: 100%; margin: 0 auto; padding: 0; background-color: #f5f5f2; position: fixed; bottom: 0; left: 0; }
+.container-bottom-menu { width: 100%; margin: 0 auto; padding: 0; background-color: white; position: fixed; bottom: 0; left: 0; }
 
 .bottom-menu { text-align: center; height: 100%; justify-content: center; align-items: center; }
 
@@ -6,8 +6,8 @@
 
 .bottom-menu li { display: flex; height: 40px; text-align: center; align-items: center; border-top: 1px solid #191919; }
 
-.bottom-menu li:hover { opacity: 0.2; background-color: #191919; }
+.bottom-menu li:hover { background-color: #f2f2f2; }
 
-.bottom-menu li:hover svg { fill: white; }
+.bottom-menu li:hover svg { fill: black; }
 
-.bottom-menu li:hover a { color: white; }
+.bottom-menu li:hover a { color: black; }

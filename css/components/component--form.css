@@ -1,4 +1,4 @@
-.container-form { background-color: white; padding: 0; margin: 12px; }
+.container-form { background-color: white; padding: 0; margin: 12px; display: none; height: 90vh; }
 
 .form-group { display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; }
 

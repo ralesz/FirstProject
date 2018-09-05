@@ -74,8 +74,8 @@
 				"/>
 			</svg>Banners</a></li>
 				</ul>
-				<ul>
-				<li><a href="#"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+				<ul class="button-data">
+				<li id="button-data"><a href="#"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 				 viewBox="0 0 9 14" style="enable-background:new 0 0 9 14;" xml:space="preserve">
 			<path d="M4.5,8C6.4,8,8,6.4,8,4.5S6.4,1,4.5,1S1,2.6,1,4.5S2.6,8,4.5,8z M4.5,2C5.9,2,7,3.1,7,4.5S5.9,7,4.5,7S2,5.9,2,4.5
 				S3.1,2,4.5,2z M7.7,7.7L6.9,8.3C8,9.5,8,11.1,8,12.9V13H1v-0.1C1,11.1,1,9.5,2,8.3L1.3,7.7C0,9.1,0,10.9,0,12.9L0,14h9l0-1.1
@@ -99,10 +99,10 @@
 			</svg>Postback</a></li>
 				</ul>
 
-				<ul class="man">
+				<ul class="man show-modal">
 					<li><a class="manager">YOUR MANAGER</a></li>
 				</ul>
-				<ul>
+				<ul class="show-modal">
 					<li><a href="#"><img src="images/2-layers.png" alt="">Mikhael E.</a></li>
 				</ul>
 		</div>
@@ -120,7 +120,11 @@
 						</ul>
 						
 						<ul class="links-button">
-							<li><button class="button-orange-small">AD</button></li>
+							<li class="col-xl-1 col-lg-1 col-md-1 col-sm-12"><label for="dateData"></label></li>
+							<input type="date" id="dateData">
+							<li class="col-xl-1 col-lg-1 col-md-1 col-sm-12"><label for="dateData"></label></li>
+							<input type="date" id="dateData">
+							<li class="col-xl-2 col-lg-2 col-md-2 col-sm-12"><button class="button-orange-small"><img src="images/icons/refresh.svg" alt=""></button></li>
 						</ul>
 						
 
@@ -351,7 +355,7 @@
 				</div>
 
 <!-- sekcja formularza
- -->			<div class="container-form">
+ -->			<div class="container-form" id="FormHide">
 					<ul class="links-header">
 						<a>FORMS</a>
 					</ul>
@@ -368,14 +372,14 @@
 						  <div class="form-group">
 						    <label for="exampleInputName2" class="col-lg-2 col-sm-12 control-label">Surname</label>
 						    <div class="col-lg-4 col-sm-12">
-						      <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane">
+						      <input type="text" class="form-control" id="exampleInputName2" placeholder="Kowalsky">
 						    </div>
 						  </div>
 						  
 						  <div class="form-group">
 						    <label for="exampleInputEmail3" class="col-lg-2 col-sm-12 control-label">E-mail</label>
 						    <div class="col-lg-4 col-sm-12">
-						      <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
+						      <input type="email" class="form-control" id="exampleInputEmail3" placeholder="E-mail">
 						    </div>
 						  </div>
 						  
@@ -425,15 +429,15 @@
 
 						<dir class="form-part1">
 						  <div class="form-group">
-						    <label for="exampleInputName2" class="col-sm-2 control-label">Password</label>
+						    <label for="exampleInputPassword1" class="col-sm-2 control-label">Password</label>
 						    <div class="col-sm-4">
-						      <input type="text" class="form-control" id="exampleInputName2" placeholder="">
+						      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
 						    </div>
 						  </div>
 						  <div class="form-group">
-						    <label for="exampleInputName2" class="col-sm-2 control-label">Repeat</label>
+						    <label for="exampleInputPassword1" class="col-sm-2 control-label">Repeat</label>
 						    <div class="col-sm-4">
-						      <input type="text" class="form-control" id="exampleInputName2" placeholder="">
+						      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
 						    </div>
 						  </div>
 
@@ -450,6 +454,43 @@
 
 
 <!-- koniec sekcji formularza-->
+
+<!-- początek sekcji modala-->
+
+				<div class="overlay" id="modal-overlay">
+			  		<div class="modal" id="myModal">
+			    		<div class="btn-close js--close-modal">x</div>
+							<div class="mod-header">
+						    	ONLINE CZAT
+						    </div>
+						    <div class="mod-content">
+								<ul class="man">
+									<li><a class="manager">YOUR MANAGER</a></li>
+								</ul>
+								<ul>
+									<li><a href="#"><img src="images/2-layers.png" alt="">Mikhael E.</a></li>
+								</ul>
+							</div>
+			    			<button class="js--close-modal">Okay</button>
+				  	</div>
+				</div>
+
+<!-- koniec sekcji modala-->
+
+<!-- początek sekcji modala2-->
+
+				<div class="overlay" id="modal-overlay">
+			  		<div class="modal" id="myModal2">
+			    		<div class="btn-close js--close-modal">x</div>
+
+						    <h4>Następny modal</h4>
+    						<p>Lorem ipsum dolor sit amet...</p>
+							</div>
+			    			<button class="js--close-modal">Okay</button>
+				  	</div>
+				</div>
+
+<!-- koniec sekcji modala2-->
 
 		</div>
      </div> 

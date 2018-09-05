@@ -174,7 +174,7 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; back
   #general { width: 100%; }
   #topmenu { display: none; }
   select { background-color: #f5f5f2; border: 0; }
-  .top-menu-left { display: -ms-flexbox; display: flex; -ms-flex-direction: row; flex-direction: row; -ms-flex-wrap: wrap; flex-wrap: wrap; background-color: #191919; width: 100%; height: 60px; position: fixed; top: 0; }
+  .top-menu-left { display: -ms-flexbox; display: flex; -ms-flex-direction: row; flex-direction: row; -ms-flex-wrap: wrap; flex-wrap: wrap; background-color: #191919; width: 100%; height: 60px; position: fixed; top: 0; z-index: 9990; }
   .inner-flex-container { margin-bottom: 50px; }
   .display-none { display: none; }
   .scroll-wrapper { display: block; width: 100%; overflow-x: auto; }
@@ -251,7 +251,7 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; back
 
 .inner-flex-container { height: 100%; display: -ms-flexbox; display: flex; -ms-flex-direction: column; flex-direction: column; width: 100%; -ms-flex-order: 1; order: 1; overflow-x: hidden; }
 
-.component--button-sidebar { box-sizing: border-box; position: fixed; top: 60px; left: 0; }
+.component--button-sidebar { box-sizing: border-box; position: fixed; top: 60px; left: 0; z-index: 9995; }
 
 .component--button-sidebar svg { fill: #818181; padding: 0 20px 0 10px; width: 14px; height: 14px; }
 
@@ -277,10 +277,7 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; back
 
 @media (max-width: 767px) { .component--button-sidebar { display: -ms-flexbox; display: flex; -ms-flex-direction: column; flex-direction: column; -ms-flex-wrap: nowrap; flex-wrap: nowrap; width: 100%; }
   .component--button-sidebar .sidebar { display: -ms-flexbox; display: flex; -ms-flex-direction: column; flex-direction: column; -ms-flex-wrap: wrap; flex-wrap: wrap; background-color: #191919; width: 100%; height: 100%; }
-  .component--button-sidebar ul { width: 100%; height: auto; margin: 0; padding: 0; background-color: #191919; list-style-type: none; border-left: 5px solid #191919; cursor: pointer; -ms-flex-align: center; align-items: center; }
-  .component--button-sidebar ul:hover { background-color: #282828; border-left: 5px solid #f58220; color: white; }
-  .component--button-sidebar ul:hover svg { fill: white; }
-  .component--button-sidebar ul:hover a { color: white; }
+  .component--button-sidebar ul { width: 100%; height: auto; margin: 0; padding: 0; background-color: #191919; list-style-type: none; border-left: 5px solid #191919; cursor: pointer; -ms-flex-align: center; align-items: center; text-align: center; }
   .component--button-sidebar li { padding: 14px 0px; color: #818181; display: inline-block; text-decoration: none; text-align: center; }
   .component--button-sidebar .manager { margin-top: 20px; color: #818181; margin-left: 20px; background-color: #191919; }
   .component--button-sidebar .manager ul:hover { opacity: 0; }
@@ -296,7 +293,7 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; back
 
 .menu-s:nth-child(2) { -ms-flex-order: 0; order: 0; -ms-flex: 0 1 auto; flex: 0 1 auto; -ms-flex-item-align: auto; -ms-grid-row-align: auto; align-self: auto; }
 
-.component--menu-topbar { position: fixed; top: 0; right: 0; width: calc(100% - 190px); color: black; background-color: white; height: 72px; border-bottom: 12px solid #f5f5f2; }
+.component--menu-topbar { position: fixed; top: 0; right: 0; width: calc(100% - 190px); color: black; background-color: white; height: 72px; border-bottom: 12px solid #f5f5f2; z-index: 9992; }
 
 .component--menu-topbar ul { display: -ms-flexbox; display: flex; -ms-flex-direction: row; flex-direction: row; -ms-flex-pack: end; justify-content: flex-end; -ms-flex-align: center; align-items: center; list-style: none; padding: 0; margin: 0; }
 
@@ -316,6 +313,10 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; back
 
 .one-line { margin: 12px 12px 6px 12px; height: auto; width: 100%; background-color: white; -ms-flex-pack: center; justify-content: center; }
 
+.one-line label { padding: 0; }
+
+.one-line li { padding: 10px 20px; text-align: center; }
+
 .one-line2 { margin: 12px 12px 6px 12px; height: auto; width: 100%; background-color: white; -ms-flex-pack: center; justify-content: center; }
 
 .links-header { display: -ms-flexbox; display: flex; -ms-flex-direction: row; flex-direction: row; -ms-flex-wrap: wrap; flex-wrap: wrap; -ms-flex-pack: start; justify-content: flex-start; -ms-flex-line-pack: center; align-content: center; -ms-flex-align: center; align-items: center; list-style-type: none; border-bottom: 1px solid #191919; margin: 20px 0 20px 0; padding: 0 0 15px 20px; }
@@ -326,7 +327,7 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; back
 
 .links1 li { margin-top: 10px; }
 
-.links1:hover { background-color: #b1bfbf; }
+.links1:hover { background-color: #f2f2f2; }
 
 .links1:hover .trash1 { fill: orange; }
 
@@ -366,7 +367,7 @@ li { text-align: left; -ms-flex-pack: center; justify-content: center; }
 
 .graph-name { display: -ms-flexbox; display: flex; -ms-flex-direction: row; flex-direction: row; -ms-flex-pack: start; justify-content: flex-start; -ms-flex-line-pack: start; align-content: flex-start; -ms-flex-align: start; align-items: flex-start; color: black; background-color: white; height: auto; list-style-type: none; padding: 30px 0; font: 700 16px  / 1.2em Roboto-Bold; text-color: #191919; }
 
-.container-table { background-color: white; padding: 12px; margin: 12px; display: none; }
+.container-table { background-color: white; padding: 12px; margin: 12px; height: 90vh; display: none; overflow-x: auto; }
 
 td { height: 70px; }
 
@@ -384,7 +385,7 @@ table ul a { margin: 20px; }
 
 .links-header1 { border-bottom: 1px solid #191919; padding: 0 0 15px 0; margin: 5px 0 20px 5px; }
 
-.container-bottom-menu { width: 100%; margin: 0 auto; padding: 0; background-color: #f5f5f2; position: fixed; bottom: 0; left: 0; }
+.container-bottom-menu { width: 100%; margin: 0 auto; padding: 0; background-color: white; position: fixed; bottom: 0; left: 0; }
 
 .bottom-menu { text-align: center; height: 100%; -ms-flex-pack: center; justify-content: center; -ms-flex-align: center; align-items: center; }
 
@@ -392,13 +393,13 @@ table ul a { margin: 20px; }
 
 .bottom-menu li { display: -ms-flexbox; display: flex; height: 40px; text-align: center; -ms-flex-align: center; align-items: center; border-top: 1px solid #191919; }
 
-.bottom-menu li:hover { opacity: 0.2; background-color: #191919; }
+.bottom-menu li:hover { background-color: #f2f2f2; }
 
-.bottom-menu li:hover svg { fill: white; }
+.bottom-menu li:hover svg { fill: black; }
 
-.bottom-menu li:hover a { color: white; }
+.bottom-menu li:hover a { color: black; }
 
-.container-form { background-color: white; padding: 0; margin: 12px; }
+.container-form { background-color: white; padding: 0; margin: 12px; display: none; height: 90vh; }
 
 .form-group { display: -ms-flexbox; display: flex; -ms-flex-direction: row; flex-direction: row; -ms-flex-wrap: wrap; flex-wrap: wrap; -ms-flex-pack: center; justify-content: center; }
 
@@ -409,5 +410,23 @@ table ul a { margin: 20px; }
 .form-group { padding: 5px; margin: 0; }
 
 .form-bottom-line { padding: 1px 0; margin: 20px 0; background-color: #f5f5f2; width: 100%; height: 1px; }
+
+* { box-sizing: border-box; }
+
+.overlay { position: fixed; top: 0; left: 0; z-index: 9998; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); -ms-flex-pack: center; justify-content: center; -ms-flex-align: center; align-items: center; overflow: auto; padding: 30px; display: none; }
+
+.overlay.show { display: -ms-flexbox; display: flex; }
+
+.overlay::webkit-scrollbar { display: none; }
+
+.modal { max-width: 600px; margin: auto; background-color: #ffffff; position: relative; padding: 30px; display: block; }
+
+.modal.show { display: block; }
+
+.modal .btn-close { position: absolute; top: 0; right: 0; padding: 5px 20px; }
+
+.mod-header { position: relative; margin: 0; padding: 0; border-bottom: 2px grey; }
+
+.mod-content { display: -ms-flexbox; display: flex; -ms-flex-direction: row; flex-direction: row; }
 
 body { font: 300 14px  / 1.2em Roboto, Arial, sans-serif; }

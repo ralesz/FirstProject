@@ -5,6 +5,14 @@
     width: 100%;
     background-color: white;
     justify-content: center;
+    label {
+        padding: 0;
+    }
+
+    li {
+        padding: 10px 20px;
+        text-align: center;
+    }
     
 }
 
@@ -59,7 +67,7 @@
     }
 
     &:hover {
-    background-color: #b1bfbf;
+    background-color: #f2f2f2;
         .trash1 {
       fill: orange; 
         }
@@ -109,78 +117,6 @@ li {
 }
 
 
-// .flex-item:nth-child(1) {
-//     order: 0;
-//     flex: 2 1 auto;
-//     align-self: flex-start;
-//     }
-
-// .flex-item:nth-child(2) {
-//     order: 0;
-//     flex: 2 1 auto;
-//     align-self: flex-start;
-//     text-align: left;
-//     }
-
-// .flex-item:nth-child(3) {
-//     order: 0;
-//     flex: 0 1 auto;
-//     align-self: flex-start;
-//     }
-
-// .flex-item:nth-child(4) {
-//     order: 0;
-//     flex: 0 1 auto;
-//     align-self: auto;
-//     }
-
-
-// .flex-item1 {
-//     width: 45%;
-// }
-
-// .flex-item2 {
-//     width: 45%;
-// }
-
-// .flex-item3 {
-//     width: 5%;
-// }
-
-// .flex-item4 {
-//     width: 5%;
-// }
-
-//  .flex-item {
-//      margin: 0;
-//      padding: 0;
-//  }
-
-
-
-
-
-// .col-sm-12 {
-//     justify-content: center;
-//     align-content: center;
-//     align-items: center;
-//     li {
-//     text-align: center;
-//     justify-content: center;
-//     align-content: center;
-//     align-items: center;
-//     }
-// }
-
-// .col-md-6 {
-//     justify-content: center;
-//     align-content: center;
-//     align-items: center;
-//     li {
-//     text-align: center;
-//     justify-content: center;
-//     }
-// }
 
 
 
