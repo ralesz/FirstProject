@@ -74,45 +74,43 @@ $(window).on('load resize', function () {
 });
 
 
-//działało + onclick="toggle_div_fun('sectionhide')" w htmll
-
-// function toggle_div_fun(id) {
-//     var divelement = document.getElementById(id);
-
-//     if(divelement.style.display == 'none')
-//         divelement.style.display = 'block';
-//     else
-//         divelement.style.display = 'none';
-// };
-
 //funkcje menu slider
 var onel = document.getElementById('one-line');
 var onel2 = document.getElementById('one-line2');
 var divelement = document.getElementById('sectionhide');
 var FormPage = document.getElementById('FormHide');
+var Banerss = document.getElementById('section-baner');
 
 
 var det = document.querySelector('.button-details');
 
     det.addEventListener("click", function () {
-        (divelement.style.display = 'block') && (onel.style.display = 'none') && (onel2.style.display = 'none') && (FormPage.style.display = 'none');
+        (divelement.style.display = 'block') && (onel.style.display = 'none') && (onel2.style.display = 'none') && (FormPage.style.display = 'none') && (Banerss.style.display = 'none');
 });
-
 
 var det = document.querySelector('.button-general');
 
     det.addEventListener("click", function () {
-        (divelement.style.display = 'none') && (onel.style.display = 'block') && (onel2.style.display = 'block') && (FormPage.style.display = 'none');
+        (divelement.style.display = 'none') && (onel.style.display = 'block') && (onel2.style.display = 'block') && (FormPage.style.display = 'none') && (Banerss.style.display = 'none');
 });
-
 
 var det = document.querySelector('.button-data');
 
     det.addEventListener("click", function () {
-        (divelement.style.display = 'none') && (onel.style.display = 'none') && (onel2.style.display = 'none') && (FormPage.style.display = 'block');
+        (divelement.style.display = 'none') && (onel.style.display = 'none') && (onel2.style.display = 'none') && (FormPage.style.display = 'block') && (Banerss.style.display = 'none');
 });
 
+var det = document.querySelector('.button-links');
 
+    det.addEventListener("click", function () {
+        (divelement.style.display = 'none') && (onel.style.display = 'none') && (onel2.style.display = 'block') && (FormPage.style.display = 'none') && (Banerss.style.display = 'none');
+});
+
+var det = document.querySelector('.button-baner');
+
+    det.addEventListener("click", function () {
+        (divelement.style.display = 'none') && (onel.style.display = 'none') && (onel2.style.display = 'none') && (FormPage.style.display = 'none') && (Banerss.style.display = 'block');
+});
 
 
 //funkcja schowania dolnego menu
@@ -123,32 +121,27 @@ var bottm2 = document.getElementById('bot2');
 var det = document.querySelector('.quit-button');
 
     det.addEventListener("click", function () {
-        if(bottm.style.display == 'none')
+    if(bottm.style.display == 'none')
         (bottm.style.display = 'block') && (bottm1.style.display = 'block') && (bottm2.style.display = 'flex');
     else
         (bottm.style.display = 'none') && (bottm1.style.display = 'none') && (bottm2.style.display = 'none');
 });
 
 
-//walidacja formularza
-
-// document.querySelector('form').addEventListener('submit', function(event) {
-//   var isFormValidate = true;
-
-//   var emailAddressInput = event.target.querySelector('input[name="email_address"]')
-//   if(emailAddressInput.value.indexOf('@') < 0) {
-//     isFormValidate = false;
-//     emailAddressInput.parentElement.querySelector('.error').innerHTML = 'Błędny adres e-mail';
-//   }
-
-//   return !isFormValidate ? event.preventDefault() : true;
-// })
 
 
 
-//funkcja zamknęcia modala
+
+
+//funkcja zamknęcia wszystkich modali  
 function closeModal() {
   document.getElementById('modal-overlay').classList.remove('show')
+
+    var allModal = document.querySelectorAll('.modal');
+    var n;
+    for (n = 0; n < allModal.length; n++) {
+        allModal[n].classList.remove('show');
+    }
 }
 
 //przyciski zamykające z klasą js--close-modal
@@ -175,96 +168,39 @@ document.addEventListener('keyup', function(e) {
 
 // //otwieranie modala
 
-// var modal = document.getElementById('#show-modal');
+    var showModal = function(event){
+    event.preventDefault();     
 
-// function openModal(modal) {
-//   document.querySelectorAll('#modal-overlay > *').forEach(function(modal) {
-//     modal.classList.remove('show')
-//   })
-//   document.querySelector('#modal-overlay').classList.add('show')
-//   document.querySelector(modal).classList.add('show')
-// }
+    var id = event.target.getAttribute('href');
+    console.log(id);
 
 
-// var modal = document.querySelector('#modal-overlay');
-// modal.classList.add('show');
+    // document.querySelector('#modal-one').classList.remove('show');
+    // document.querySelector('#modal-log').classList.remove('show');
+    document.querySelector('.overlay').classList.remove('show');
+    document.querySelector('.modal').classList.remove('show')
 
-
-
-// (function(){ 
-
-// var showModal = function(event){
-//         event.preventDefault();
-//         document.querySelector('#modal-overlay').classList.add('show');
-//     };
-
-
-
-// //otwieranie modala
-
-// var showModal = function(event){
-//         event.preventDefault();
-//     var modal = document.querySelector('#modal-overlay');
-//     modal.classList.add('show');
-//     }
-
-
-// var showModal2 = function(event){
-//         event.preventDefault();
-//     var modal = document.querySelector('#modal-overlay');
-//     modal.classList.add('show');
-//     }
-
-
-
-// var modalLinks = document.querySelectorAll('.show-modal');
     
-//     for(var i = 0; i < modalLinks.length; i++){
-//         modalLinks[i].addEventListener('click', showModal);
-//         console.log(modalLinks)
-//         modalLinks[i].addEventListener('click', showModal2);
-//         console.log(modalLinks)
-//     }
-
-
-// var hideModal = function(event){
-//         event.preventDefault();
-//         document.querySelector('#modal-overlay').classList.remove('show');
-//     };
-
-// var closeButtons = document.querySelectorAll('.modal .js--close-modal');
+    // document.querySelector('#modal-overlay').classList.add('show')
+    document.querySelector('#modal-overlay').classList.add('show')
+    document.querySelector(id).classList.add('show');
+    // document.querySelector(id).classList.add('show');
+    // // document.querySelector('.overlay').classList.add('show');
+    // document.querySelector('#modal-one').classList.add('show')
+    // document.querySelector('#modal-log').classList.remove('show')
     
-//     for(var i = 0; i < closeButtons.length; i++){
-//         closeButtons[i].addEventListener('click', hideModal);
-//     }
-
-// document.querySelector('#modal-overlay').addEventListener('click', hideModal);
-
-// var modals = document.querySelectorAll('.modal');
     
-//     for(var i = 0; i < modals.length; i++){
-//         modals[i].addEventListener('click', function(event){
-//             event.stopPropagation();
-//         });
-//     }
-
-// })(); 
-
-
-var modalLinks = document.querySelectorAll('.show-modal');
+   console.log(id);
     
+    };
+
+    var modalLinks = document.querySelectorAll('.show-modal');
     for(var i = 0; i < modalLinks.length; i++){
-        modalLinks[i].addEventListener('click', openModal);
+        modalLinks[i].addEventListener('click', showModal);
     }
 
 
-function openModal(modal) {
-  document.querySelectorAll('#modal-overlay > *').forEach(function(modal) {
-    modal.classList.remove('show')
-  })
-  document.querySelector('#modal-overlay').classList.add('show')
-  // document.querySelector(modal).classList.add('show')
-}
+
 
 
 

@@ -1,20 +1,45 @@
 .container-table {
   background-color: white;
   padding: 12px;
-  margin: 12px;
+  margin: 12px 0px 12px 12px;
   height: 90vh;
   display: none;
   overflow-x: auto;
+
+  .col-sm-12 {
+    padding: 0;
+  }
+
+  table {
+    margin: 0 15px;
+    max-width: 98%;
+  }
+
+  thead > tr {
+    background-color: #f58220;
+    color: white;
+  }
+
+  tbody > tr {
+    background-color: #ffe2b2;
+    color: black;
+  }
+
+  a {
+    margin: 0 15px;
+  }
+
+  tfoot {
+    td {
+    height: 20px;
+    text-align: center;
+    }
+  }
 }
 
 td {
   height: 70px;
 }
-
-// h2 {
-//   text-align: center;
-//   padding-top: 20px 0;
-// }
 
 .table-bordered {
   border: 1px solid #ddd !important;
@@ -34,14 +59,6 @@ table ul {
 }
 
 
-// @media (max-width: 768px) {
-//   .tablesaw-stack tbody tr:not(:last-child) {
-//     border-bottom: 2px solid #0B0B0D;
-//     border: 1px solid #ddd !important;
-//     margin: 0 10px;
-//   }
-// }
-
 .p {
   text-align: center;
   padding-top: 200px;
@@ -49,7 +66,7 @@ table ul {
 }
 
 .links-header1 {
-  border-bottom: 1px solid #191919;
+  border-bottom: 1px solid #f5f5f2;
   padding: 0 0 15px 0;
   margin: 5px 0 20px 5px;
 }

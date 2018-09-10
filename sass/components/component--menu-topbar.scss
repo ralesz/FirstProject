@@ -17,47 +17,47 @@
   list-style: none;
   padding: 0;
   margin: 0;
-}
-
-.flex-item {
-  border-left: 1px solid #191919;
-  padding: 20px 20px 14px 20px;
-  height: 60px;
-}
-
-.flex-item1 {
-  border-left: 0;
-  padding: 14px 20px 14px 5px;
-  height: 60px;
-}
-
-.flex-item2 {
-  border-left: 1px solid #191919;
-  padding: 18px 0px 14px 20px;
-  align-items: center;
-  height: 60px;
   }
 
-a {
-  padding: 0 10px;
+  .flex-item {
+    border-left: 1px solid #191919;
+    padding: 20px 20px 14px 20px;
+    height: 60px;
   }
 
-img {
-  width: 16px; 
-  height: 16px; 
-  }
-  
-  #notification {
-  width: 16px; 
-  height: 16px;
-  position: absolute; 
+  .flex-item1 {
+    border-left: 0;
+    padding: 14px 20px 14px 5px;
+    height: 60px;
   }
 
-  #indicator {
-  width: 8px; 
-  height: 8px;
-  position: relative;
-  left: 8px;
-  top: -8px;  
-  }
+  .flex-item2 {
+    border-left: 1px solid #191919;
+    padding: 18px 0px 14px 20px;
+    align-items: center;
+    height: 60px;
+    }
+
+  a {
+    padding: 0 10px;
+    }
+
+  img {
+    width: 16px; 
+    height: 16px; 
+    }
+    
+    #notification {
+    width: 16px; 
+    height: 16px;
+    position: absolute; 
+    }
+
+    #indicator {
+    width: 8px; 
+    height: 8px;
+    position: relative;
+    left: 8px;
+    top: -8px;  
+    }
 }
