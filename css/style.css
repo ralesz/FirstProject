@@ -249,7 +249,7 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; back
   #bottommenu { display: none; }
   .inner-flex-container { margin-bottom: 0; } }
 
-.inner-flex-container { height: 100%; display: -ms-flexbox; display: flex; -ms-flex-direction: column; flex-direction: column; width: 100%; -ms-flex-order: 1; order: 1; }
+.inner-flex-container { height: auto; display: -ms-flexbox; display: flex; -ms-flex-direction: column; flex-direction: column; width: 100%; -ms-flex-order: 1; order: 1; }
 
 .component--button-sidebar { box-sizing: border-box; position: fixed; top: 60px; left: 0; z-index: 9995; }
 
