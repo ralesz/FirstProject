@@ -35,16 +35,6 @@ var chart = new Chart(ctx, {
 });
 
 
-// document.querySelector('.hamburger').addEventListener('click', function(e) {
-//   e.preventDefault();
-//   toggleMenu()
-// });
-
-
-// function toggleMenu(visible) {
-//   document.querySelector('.sidebar').classList.toggle('show', visible)
-// };
-
 
 function myFunction() {
     var x = document.getElementById('myDIV');
@@ -129,10 +119,6 @@ var det = document.querySelector('.quit-button');
 
 
 
-
-
-
-
 //funkcja zamknęcia wszystkich modali  
 function closeModal() {
   document.getElementById('modal-overlay').classList.remove('show')
@@ -175,24 +161,15 @@ document.addEventListener('keyup', function(e) {
     console.log(id);
 
 
-    // document.querySelector('#modal-one').classList.remove('show');
-    // document.querySelector('#modal-log').classList.remove('show');
     document.querySelector('.overlay').classList.remove('show');
     document.querySelector('.modal').classList.remove('show')
 
     
-    // document.querySelector('#modal-overlay').classList.add('show')
+
     document.querySelector('#modal-overlay').classList.add('show')
     document.querySelector(id).classList.add('show');
-    // document.querySelector(id).classList.add('show');
-    // // document.querySelector('.overlay').classList.add('show');
-    // document.querySelector('#modal-one').classList.add('show')
-    // document.querySelector('#modal-log').classList.remove('show')
-    
-    
-   console.log(id);
-    
-    };
+
+ };
 
     var modalLinks = document.querySelectorAll('.show-modal');
     for(var i = 0; i < modalLinks.length; i++){
