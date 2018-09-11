@@ -249,7 +249,7 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; back
   #bottommenu { display: none; }
   .inner-flex-container { margin-bottom: 0; } }
 
-.inner-flex-container { height: auto; display: -ms-flexbox; display: flex; -ms-flex-direction: column; flex-direction: column; width: 100%; -ms-flex-order: 1; order: 1; }
+.inner-flex-container { display: -ms-flexbox; display: flex; -ms-flex-direction: column; flex-direction: column; width: 100%; -ms-flex-order: 1; order: 1; }
 
 .component--button-sidebar { box-sizing: border-box; position: fixed; top: 60px; left: 0; z-index: 9995; }
 
@@ -417,7 +417,7 @@ table ul a { margin: 20px; }
 
 .bottom-menu li:hover a { color: black; }
 
-.container-form { background-color: white; padding: 0; margin: 12px 0 12px 12px; display: none; height: 90vh; }
+.container-form { background-color: white; padding: 0; margin: 12px 0 12px 12px; display: none; height: 100vh; }
 
 .form-group { display: -ms-flexbox; display: flex; -ms-flex-direction: row; flex-direction: row; -ms-flex-wrap: wrap; flex-wrap: wrap; -ms-flex-pack: center; justify-content: center; }
 
@@ -425,11 +425,11 @@ table ul a { margin: 20px; }
 
 .form-part1 { padding: 0; margin: 0; }
 
-.form-group { padding: 5px; margin: 0; }
+.form-group { padding: 10px; margin: 0; }
 
 .form-group .button-orange { text-align: center; margin: 0 auto; }
 
-.form-bottom-line { padding: 1px 0; margin: 20px 0; background-color: #f5f5f2; width: 100%; height: 1px; }
+.form-bottom-line { padding: 1px 0; margin: 5px 0; background-color: #f5f5f2; width: 100%; height: 1px; }
 
 * { box-sizing: border-box; }
 
