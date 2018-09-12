@@ -6,6 +6,13 @@
   display: none;
   overflow-x: auto;
 
+  .row {
+    justify-content: center;
+    align-items: center;
+  }
+  .center {
+    text-align: center;
+}
   .col-sm-12 {
     padding: 0;
   }
@@ -13,16 +20,36 @@
   table {
     margin: 0 15px;
     max-width: 98%;
+    vertical-align: middle; 
   }
 
   thead > tr {
-    background-color: #f58220;
-    color: white;
+    background-color:white;
+    color: #a6a6a6;
+  }
+
+  .ba {
+    background-color:white;
+    color: #a6a6a6;
+    text-align: center;
+    vertical-align: middle; 
+    &:hover {
+      background-color: #f3efefe1;
+    }
+  }
+
+  .ba1 {
+    vertical-align: middle; 
   }
 
   tbody > tr {
-    background-color: #ffe2b2;
+    background-color:white;
     color: black;
+    vertical-align: middle; 
+  }
+
+  tbody > td {
+    vertical-align: middle;
   }
 
   a {
@@ -35,6 +62,23 @@
     text-align: center;
     }
   }
+  ul.pagination {
+    display: inline-block;
+    text-align: center;
+    margin-top: 15px;
+    }
+
+    ul.pagination li {
+      display: inline;
+    }
+
+    ul.pagination li a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-color: white;
+    }
 }
 
 td {
@@ -70,3 +114,4 @@ table ul {
   padding: 0 0 15px 0;
   margin: 5px 0 20px 5px;
 }
+

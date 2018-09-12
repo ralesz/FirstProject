@@ -1,6 +1,6 @@
 .button-orange {
     background-color: #f58220;
-    border-radius: 10px;
+    border-radius: 4px;
     width: 147px;
     height: 40px;
     color: white;
@@ -11,11 +11,20 @@
     display: inline-block;
     font-size: 16px;
     font: Roboto-Light;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    outline:none;
+}
+
+.button-orange:hover {
+    background-color: #f58220;
+    color: white;
+    opacity: 0.9;
 }
 
 .button-orange-small {
     background-color: #f58220;
-    border-radius: 10px;
+    border-radius: 4px;
     width: 40px;
     height: 40px;
     color: white;
@@ -26,4 +35,13 @@
     display: inline-block;
     font-size: 16px;
     font: Roboto-Light;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    outline:none;
+}
+
+.button-orange-small:hover {
+    background-color: #f58220;
+    color: white;
+    opacity: 0.9;
 }

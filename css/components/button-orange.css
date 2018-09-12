@@ -1,3 +1,7 @@
-.button-orange { background-color: #f58220; border-radius: 10px; width: 147px; height: 40px; color: white; padding: 12px; margin: 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; font: Roboto-Light; }
+.button-orange { background-color: #f58220; border-radius: 4px; width: 147px; height: 40px; color: white; padding: 12px; margin: 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; font: Roboto-Light; transition-duration: 0.4s; cursor: pointer; outline: none; }
 
-.button-orange-small { background-color: #f58220; border-radius: 10px; width: 40px; height: 40px; color: white; padding: 0; margin: 0; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; font: Roboto-Light; }
+.button-orange:hover { background-color: #f58220; color: white; opacity: 0.9; }
+
+.button-orange-small { background-color: #f58220; border-radius: 4px; width: 40px; height: 40px; color: white; padding: 0; margin: 0; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; font: Roboto-Light; transition-duration: 0.4s; cursor: pointer; outline: none; }
+
+.button-orange-small:hover { background-color: #f58220; color: white; opacity: 0.9; }

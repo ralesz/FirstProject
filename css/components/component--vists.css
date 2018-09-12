@@ -8,6 +8,6 @@
 
 .link2 { border-bottom: 1px solid #191919; font: 300 16px  / 1.2em Roboto-light; }
 
-.link1:nth-child(1) { order: 0; flex: 4 1 auto; align-self: flex-start; }
+.link1:nth-child(1) { order: 0; flex: 4 1 auto; align-self: auto; }
 
 .link1:nth-child(2) { order: 0; flex: 0 1 auto; align-self: auto; }
